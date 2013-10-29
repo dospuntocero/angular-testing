@@ -1,0 +1,32 @@
+<div class="back">
+    < <a href="#/wines">
+        see all wines
+    </a>
+</div>
+<h1>{{wine.title}}</h1>
+<p>{{wine.description}}</p>
+
+<div class="our-recipes" ng-if="wine.recipes">
+    <h2>
+        Quick Pairings
+    </h2>
+    <p ng-repeat="recipe in wine.recipes" class="toggle">
+        {{recipe.title}}
+    </p>
+</div>
+<div ng-if="!wine.recipes">
+    <p>
+        there is no recipe available
+    </p>
+</div>
+<div class="process" ng-if="wine.process">
+    <h2>Our Process</h2>
+    <p ng-repeat="process in wine.process" class="toggle">
+        {{process.title}}
+    </p>
+</div>
+<div ng-if="!process.recipes">
+    <p>
+        there is no process videos available
+    </p>
+</div>

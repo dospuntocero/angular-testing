@@ -1,0 +1,11 @@
+<h1>GOURMET RECIPES AND PAIRINGS</h1>
+<p>
+    > A CURATED MENU FOR THE MOST SOPHISTICATED PALATE
+</p>
+
+<ul>
+    <li ng-repeat="recipe in recipes" class='toggle' >
+        <img width="60" src="{{recipe.smallimage}}" alt="{{recipe.title}} | {{recipe.pairing}}"/>
+        <a href="#/recipes/{{recipe.id}}">{{recipe.title}} | {{recipe.pairing}}</a>
+    </li>
+</ul>

@@ -1,0 +1,33 @@
+
+
+<div class="row">
+    <div class="col-lg-6">
+        <img class="slide-left" src="{{recipe.bigimage}}" alt="{{recipe.title}}" ng-hide="custom"/>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="back">
+            <a href="#/recipes" class="btn btn-default">
+                <  see all recipes
+        </a>
+            <button id="animate" ng-click="custom=!custom" ng-hide="true">Custom</button>
+        </div>
+        <h1 class="slide-down" ng-hide="custom">{{recipe.title}}</h1>
+
+        <p class="slide-down" ng-hide="custom">{{recipe.pairing}}</p>
+
+        <div class="ingredients slide-left" ng-if="recipe.ingredients" ng-hide="custom">
+            <h2>Ingredients</h2>
+            <ul class="recipe">
+                <li ng-repeat="ingredient in recipe.ingredients" >{{ingredient.ingredient}}</li>
+            </ul>
+        </div>
+        <div class="method slide-right" ng-if="recipe.method" ng-hide="custom">
+            <h2>Method</h2>
+            <p>
+                {{recipe.method}}
+            </p>
+        </div>
+
+    </div>
+</div>
